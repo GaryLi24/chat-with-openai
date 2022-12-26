@@ -122,6 +122,15 @@ form {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  animation: glow 800ms ease-out infinite alternate;
+  /* border-color: linear-gradient(
+    90deg,
+    #ff1b69,
+    #ff0,
+    #2196f3,
+    #9c27b0,
+    #ff1b69
+  ); */
 }
 
 textarea {
@@ -147,4 +156,17 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+@keyframes glow {
+  0% {
+    border-color: #35a5e5;
+    box-shadow: 0 0 5px rgba(60, 161, 222, 0.2),
+      inset 0 0 5px rgba(60, 161, 222, 0.1), 0 1px 0 #35a5e5;
+  }
+  100% {
+    border-color: #35a5e5;
+    box-shadow: 0 0 20px rgba(60, 161, 222, 0.6),
+      inset 0 0 10px rgba(60, 161, 222, 0.4), 0 1px 0 #35a5e5;
+  }
 }
